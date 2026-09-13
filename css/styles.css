@@ -22,6 +22,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -722,6 +723,7 @@ h1 em {
 .footer-row a {
   color: var(--muted);
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .footer-row a:hover {
@@ -767,29 +769,107 @@ h1 em {
   }
 
   .hero {
-    padding-top: 2.2rem;
+    overflow: hidden;
+    padding-top: 1.6rem;
+    padding-bottom: 2.4rem;
+  }
+
+  .hero::after {
+    right: auto;
+    left: 50%;
+    top: -1.5rem;
+    width: 22rem;
+    height: 22rem;
+    transform: translateX(-50%);
   }
 
   .hero-art {
-    min-height: 28rem;
+    min-height: 0;
+    height: auto;
     order: -1;
+    overflow: visible;
+    padding: 2.8rem 0 2.2rem;
+  }
+
+  .sticker {
+    display: none;
   }
 
   .animal.owl,
   .animal.fox,
   .animal.turtle {
-    width: 7.25rem;
+    width: 5.75rem;
+  }
+
+  .animal.owl {
+    left: 0.2rem;
+    top: 1.4rem;
+  }
+
+  .animal.fox {
+    right: 0.15rem;
+    top: 7.2rem;
   }
 
   .animal.turtle {
-    bottom: 7.2rem;
+    left: 0.15rem;
+    bottom: 1.8rem;
   }
 
   .device {
-    width: min(15rem, 58%);
+    width: min(13rem, 52%);
+    border-radius: 1.2rem;
+    box-shadow:
+      0 0 0 5px #181918,
+      0 0 0 6px rgba(255, 255, 255, 0.13),
+      0 24px 70px rgba(0, 0, 0, 0.75);
+  }
+
+  .app {
+    transform: none;
+  }
+
+  .strip {
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+  }
+
+  .strip-in {
+    justify-content: center;
+    gap: 0.55rem 1.15rem;
   }
 
   .light-card {
-    height: 24rem;
+    height: 22rem;
+  }
+
+  .letter-card {
+    padding: 1.5rem 1.25rem 1.4rem;
+    font-size: 1.02rem;
+  }
+
+  .section {
+    padding: 3.4rem 0;
+  }
+}
+
+@media (min-width: 560px) and (max-width: 860px) {
+  .light-grid,
+  .features {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .wrap {
+    width: calc(100% - 1.5rem);
+  }
+
+  .nav-links {
+    gap: 0.65rem;
+  }
+
+  .wordmark-text {
+    font-size: 1.08rem;
   }
 }
