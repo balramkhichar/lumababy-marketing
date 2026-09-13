@@ -703,6 +703,32 @@ h1 em {
   margin-top: 0.2rem;
 }
 
+.lost {
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 10rem);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.lost .wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lost h1 {
+  max-width: none;
+  margin: 0 0 0.8rem;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+}
+
+.lost p {
+  margin: 0 auto 1.6rem;
+  max-width: 28rem;
+  color: var(--muted);
+}
+
 .site-footer {
   border-top: 1px solid var(--line);
   padding: 1.6rem 0 2.2rem;
