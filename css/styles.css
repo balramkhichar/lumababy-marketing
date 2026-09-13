@@ -787,12 +787,87 @@ h1 em {
   color: #d9d2c6;
 }
 
+.support {
+  padding: 3.5rem 0 5rem;
+}
+
+.support h1 {
+  max-width: 14ch;
+  font-size: clamp(2.6rem, 7vw, 4.6rem);
+}
+
+.support .lede {
+  max-width: 38rem;
+  margin-bottom: 2.4rem;
+}
+
+.help-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.help-card {
+  padding: 1.6rem 1.5rem 1.7rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-raise);
+}
+
+.help-label {
+  margin: 0 0 0.7rem;
+  color: var(--peach);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.help-card h2 {
+  margin: 0 0 0.7rem;
+  font-size: 1.7rem;
+}
+
+.help-card p {
+  margin: 0 0 0.9rem;
+  color: #d4cdc2;
+}
+
+.help-card .btn {
+  margin-top: 0.4rem;
+}
+
+.restore {
+  padding: 1.6rem 1.5rem 1.7rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-raise);
+}
+
+.restore h2 {
+  margin: 0 0 0.55rem;
+  font-size: 1.55rem;
+}
+
+.restore p {
+  margin: 0;
+  max-width: 40rem;
+  color: #d4cdc2;
+}
+
+.restore strong {
+  color: var(--cream);
+  font-weight: 600;
+}
+
 @media (max-width: 860px) {
   .hero-grid,
   .story-phones,
   .pricing,
   .features,
-  .light-grid {
+  .light-grid,
+  .help-grid {
     grid-template-columns: 1fr;
   }
 
